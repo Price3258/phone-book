@@ -11,7 +11,13 @@ class PhoneInfoList extends Component{
         onUpdate: () => console.warn('onUpdate not defined')
     }
 
+    shouldComponentUpdate( nextProps, nextState){
+        return nextProps.data !== this.props.data;
+    }
+
     render(){
+
+        console.log("render PhoneInfoList ");
         const { data, onRemove, onUpdate } = this.props;
        
         //  data 라는 배열을 가져와서 map 을 통하여 JSX 로 변환

@@ -27,6 +27,7 @@ class PhoneForm extends Component {
 
 
   render() {
+    console.log("render PhoneForm ");
     return (
     <form onSubmit={this.handleSubmit} >
     {/* onSubmit으로 바인딩 해줌 */}
@@ -42,10 +43,10 @@ class PhoneForm extends Component {
           onChange={this.handleChange}
           name="phone"
         />
-        <div>
+        {/* <div>
           <p>Name :  {this.state.name} </p>
           <p>Phone : {this.state.phone} </p>
-        </div>
+        </div> */}
         <button type="submit">등록</button>
       </form>
     );
